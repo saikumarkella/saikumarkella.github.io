@@ -7,9 +7,9 @@ url: ''
 baseurl: 
 
 # Title of the Site
-title: Saikumar kella
+title: Datascience Bolgs
 # Description of the Site
-description: A customizable Jekyll portfolio theme
+description: Blogs on Machine Learning, Deep Learning , NLP , Computer Vision
 # URL of Image of the Site
 site-image: /WhatATheme/assets/images/meta.jpg
 # Keywords of the Site
@@ -18,21 +18,20 @@ site-keywords: Site, Template, Theme
 favicon-url: 
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-
+heroimage: http://www.letustweak.com/wp-content/uploads/2016/10/data-science-word-cloud-720x340.jpg
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
 email: kellasaikumar123@gmail.com
-facebook_username: thedevslot
-twitter_username: thedevslot
-instagram_username: thedevslot
-linkedin_username: thedevslot
+facebook_username: saikumar.kella.3
+twitter_username: SaikumarKella
+instagram_username: 
+linkedin_username: sai-kumar-kella-a76882134
 github_username:  saikumarkella
-youtube_channel_id: /
-reddit_username: /
-behance_username: /
-dribbble_username: /
-spotify_username: /
+youtube_channel_id: 
+reddit_username: 
+behance_username: 
+dribbble_username: 
+spotify_username: 
 
 # Google Analytics
 google-analytics: UA-163806439-1
@@ -45,7 +44,7 @@ author-name: Saikumarkella
 # URL for the Image of the Author
 author-image: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
 # 60 Words About the Author
-author-about: 
+author-about: I am Undergraduate sutdent from Acharaya Nagarjuna university.I am data science entusiast with hands on over many machine learning alogothms.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://github.com/saikumarkella
 
