@@ -7,7 +7,7 @@ url: ''
 baseurl: 
 
 # Title of the Site
-title: Datascience Bolgs
+title: Datascience Blogs
 # Description of the Site
 description: Blogs on Machine Learning, Deep Learning , NLP , Computer Vision
 # URL of Image of the Site
@@ -42,9 +42,9 @@ disqus-shortname: saikella
 # Name of the Author
 author-name: Saikumarkella
 # URL for the Image of the Author
-author-image: https://github.com/saikumarkella/saikumarkella.github.io/blob/main/sai.JPG
+author-image: sai.JPG
 # 60 Words About the Author
-author-about: I am Undergraduate sutdent from Acharaya Nagarjuna university.I am data science entusiast with hands on over many machine learning alogothms.
+author-about: I am Undergraduate sutdent from Acharaya Nagarjuna university.I am data science entusiast with hands on over many machine learning alogothms.Looking for opportunities in machine learning.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://github.com/saikumarkella
 
