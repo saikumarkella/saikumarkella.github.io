@@ -13,6 +13,7 @@ tags:
 StackOverflow Tag predection is an facebook's hiring challenge in Kaggle 7 years ago.For more information check [this]('https://www.kaggle.com/c/facebook-recruiting-iii-keyword-extraction/').They wamt us to develop a system which can assign tags to a questions in stackoverflow site automatically.
 
 ### Introduction
-The Question and answer site like stackoverflow allows users to assign tags manually for their questions in order to make them easier to find.There are some problems in assigning manually that is some users may unable to find a suitable tags for their questions. And other main problem choice of choosing the tags is infinite.To Overcome this kind of problem we need to develop a system which will assign the tags automatically.
+The Question and answer site like stackoverflow allows users to assign tags manually for their questions in order to make them easier to find.There are some problems in assigning manually that is some users may unable to find a suitable tags for their questions. And other main problem is choice of choosing tags is infinite.To Overcome this kind of problem we need to develop a system which will assign the tags automatically.
 
 	
+![image](https://media.makeameme.org/created/lets-get-started-v3u3zd.jpg)
