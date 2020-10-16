@@ -154,6 +154,7 @@ plt.xlabel("Number of Tags")
 plt.ylabel("Number of Quries")
 ```
 ![Tags associated with the questions](tags.png)
+
 Here we Observed that :
 - Atleast one tag will associate with the qestion
 - Maximum tags are asociated with the question is : 5
@@ -161,9 +162,11 @@ Here we Observed that :
 
 Lets see how the distribtuion of tags in corpus by using thhe frequncy plots
 plotting all 35000 tags and check how frequently appering in corpus.
+
 ![frequent 3500 tags](top_35000.png)
 
-plot top 1000 frequent tags 
+plot top 100 frequent tags 
+
 ![frequent 1000 tags](top_100.png)
 
 Observations :
@@ -183,7 +186,9 @@ Let Some of the Examples are :
  ```
  
 The Words Cloud for the Tags 
+
  ![wordcloud](wordcloud.png)
+ 
 Here C#, php,java, android, C++ occuring very frequently.
  
 <h3>Data Preprocessing</h3>
