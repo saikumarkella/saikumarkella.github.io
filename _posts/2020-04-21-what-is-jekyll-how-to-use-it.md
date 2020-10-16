@@ -187,7 +187,7 @@ Let Some of the Examples are :
  
 The Words Cloud for the Tags 
 
- ![wordcloud](wordcloud.png)
+![wordcloud](wordcloud.png)
  
 Here C#, php,java, android, C++ occuring very frequently.
  
