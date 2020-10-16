@@ -237,8 +237,8 @@ Let Vectorize the whole preprocessed dataset.
 
 **Note**:Before vectorize the data we need to split it in to training and validation datasets in (80-20 %).
 
-<h3>Vectorization<h3>
- Now the Dataset contains both text data and Numerical data . we need to convert text to vectors . For this there are different techniques available in market. Some of them are 
+<h3>Vectorization</h3>
+Now the Dataset contains both text data and Numerical data . we need to convert text to vectors . For this there are different techniques available in market. Some of them are 
 	- Countvectorizer (Bag of Words)
 	- Tfidf vectorizer 
 	- Word to vec (popular is GloVe model)
@@ -275,11 +275,72 @@ Note : Here i am taking only top 500 frequent tags as target variable because of
 
 All set to go for Modelling.
 
-<h3>Building the Model <h3>
+<h3>Building the Model </h3>
+To deal with the multi label classification i am using OneVsRest with SGD classifier.Training only top 500 models .
+
+**Note**: For simplification i trained a model on 0.5million data points only.
+
+1.SGD classifier with Log loss
+
+code:
+```python
+%%time
+### Using the Log Loss (Linear MOdels --> Logistic regression)
+
+classifier = OneVsRestClassifier(SGDClassifier(penalty='l2',loss="log",alpha=0.000001), n_jobs=-1)
+classifier.fit(train_feat, y_train)
+val_pre = classifier.predict(val_feat)
+
+print("accuracy :",metrics.accuracy_score(y_val,val_pre))
+print("macro f1 score :",metrics.f1_score(y_val, val_pre, average = 'macro'))
+print("micro f1 scoore :",metrics.f1_score(y_val, val_pre, average = 'micro'))
+```
+
+Output:
+```
+accuracy : 0.23079
+macro f1 score : 0.3446525016091632
+micro f1 scoore : 0.46743106281454144
+CPU times: user 2min 8s, sys: 2.72 s, total: 2min 11s
+Wall time: 13min 14s
+```
+Lets change loss function
+
+2.SGDclassifier with hing loss --> This is the Same as linear svm model
+
+code:
+```python
+%%time
+## Hinge Loss ---> Linear SVM Classifier 
+classifier = OneVsRestClassifier(SGDClassifier(penalty='l2',loss="hinge",alpha=0.000001), n_jobs=-1)
+classifier.fit(train_feat, y_train)
+val_pre = classifier.predict(val_feat)
+
+##VALIDATION ACCURACY
+print("accuracy :",metrics.accuracy_score(y_val,val_pre))
+print("macro f1 score :",metrics.f1_score(y_val, val_pre, average = 'macro'))
+print("micro f1 scoore :",metrics.f1_score(y_val, val_pre, average = 'micro'))
+```
+<h4>Why i didn't used Complex models ?</h4>
+
+ I didn't used complex models like GBDT, Random Forest, XGboost etc... Because of 2 reasons :
+
+- The dataset has high dimensions after vectorization .typically random forest and GBDT are doesn't workwell for high dimensions. we can give a try by using reduction techniques like PCA, T-SNE.
+- Literally we have 500 models to train. so Linear models are very fast to train the models. These complex models will take too much time to train.
+		
+<h4>Ideas to Improve accuracy</h4>
+
+- Try high configuration system to build the model on entire dataset
+- Try to define some more Meta Features (For me these features were increase accuracy slightly)
+- Try n_grams 
+- Try to do Lemmitization or stemming in preprocessing stage
+- Try to use different vectorizer may be word2vec works well (also has an adventage that it can reduce the dimensions and it can give semantic features)
+- Hypertuning may works well.
 
 
- 
- 
+
+**For Complete Code Follow my [Github Repository](https://github.com/saikumarkella/Stackoverflow-Tag-Prediction.git)**
+
 
 
 
